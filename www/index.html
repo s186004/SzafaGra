@@ -2,29 +2,31 @@
 
 <html>
     <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="index11.css">
-	<script src="src/lib/jquery-2.1.4.min.js"></script>
-	<script src="src/lib/jquery.mobile-1.4.5.min.js"></script>
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<!-- login page-->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <title>Szafa Gra</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-		<div class="container">
-    
+    <!--logowanie -->
+	
+	<!--start page -->
+	<div data-role="page" id="startPage">
+        
+    </div>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<div class="container">
 
     <div class="omb_login">
-    	<h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
+    	<h3 class="omb_authTitle">Zaloguj się albo <a href="#">Zarejestruj się</a></h3>
 		<div class="row omb_row-sm-offset-3 omb_socialButtons">
     	    <div class="col-xs-4 col-sm-2">
 		        <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
@@ -49,7 +51,7 @@
 		<div class="row omb_row-sm-offset-3 omb_loginOr">
 			<div class="col-xs-12 col-sm-6">
 				<hr class="omb_hrOr">
-				<span class="omb_spanOr">or</span>
+				<span class="omb_spanOr">lub</span>
 			</div>
 		</div>
 
@@ -66,28 +68,67 @@
 						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 						<input  type="password" class="form-control" name="password" placeholder="Password">
 					</div>
-                    <span class="help-block">Password error</span>
+                    <span class="help-block">Błędne hasło</span>
 
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Zaloguj się</button>
 				</form>
 			</div>
     	</div>
 		<div class="row omb_row-sm-offset-3">
 			<div class="col-xs-12 col-sm-3">
 				<label class="checkbox">
-					<input type="checkbox" value="remember-me">Remember Me
+					<input type="checkbox" value="remember-me">Pamiętaj mnie
 				</label>
 			</div>
 			<div class="col-xs-12 col-sm-3">
 				<p class="omb_forgotPwd">
-					<a href="#">Forgot password?</a>
+					<a href="#">Nie pamiętasz hasła?</a>
 				</p>
 			</div>
 		</div>	    	
 	</div>
+        </div>
+	<div data-role="page" id="registrationPage">
+	
 	</div>
-		
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+	<div page-role="page" id="mainemptyPage">
+	
+	</div>
+	<div page-role="page" id="mainsthPage">
+	
+	</div>
+	<div page-role="page" id="wardrobePage">
+	
+	</div>
+	<div page-role="page" id="clothesPage">
+	
+	</div>
+	<div page-role="page" id="popupPage">
+	
+	</div>
+	<div page-role="page" id="removePage">
+	
+	</div>
+	<div page-role="page" id="takePhotoPage">
+	
+	</div>
+	<div page-role="page" id="takenPage">
+	
+	</div>
+	<div page-role="page" id="favouritesPage">
+	
+	</div>
+	<div page-role="page" id="lotteryPage">
+	
+	</div>
+	<div page-role="page" id="menuLotteryEnchancePage">
+	
+	</div>
+	<div page-role="page" id="favouriteSet1Page">
+	
+	</div>
+	<div page-role="page" id="weatherPage">
+	
+	</div>
     </body>
 </html>
