@@ -1,11 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="SzafaGra" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+    <name>Szafa Gra</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Aplikacja wspomagająca podejmowanie decyzji co do codziennego ubioru. 
+		Program, dzięki powiązaniu z API pogodowym będzie miał możliwość losowania zestawu ubrań 
+		dostosowanego do pogody w oparciu o zdjęcia użytkownika poszczególnych ubrań z szafy oraz 
+		przypisanego do nich „słowniczka” tagów.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Małgorzata Kindrat, KrDUIs1011, 186824
+		Patrycja Kazek, KrDUIs1011, 186799
+		Monika Bujas, KrDUIs1012, 186004
+		Joanna Kolańczyk, KrDUIs1011, 186883 - kierownik projektu
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
