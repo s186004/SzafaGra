@@ -2,138 +2,210 @@
 
 <html>
     <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="splashscreen.css">
-<link rel="stylesheet" type="text/css" href="login.css">
-<link rel="stylesheet" type="text/css" href="registration.css">
-<link rel="stylesheet" type="text/css" href="main-empty.css">
-<link rel="stylesheet" type="text/css" href="main-sth.css">
-<link rel="stylesheet" type="text/css" href="warrdrobe-categories.css">
-<link rel="stylesheet" type="text/css" href="clothes.css">
-<link rel="stylesheet" type="text/css" href="popup.css">
-<link rel="stylesheet" type="text/css" href="remove.css">
-<link rel="stylesheet" type="text/css" href="take-photo.css">
-<link rel="stylesheet" type="text/css" href="taken.css">
-<link rel="stylesheet" type="text/css" href="drawn-set.css">
-<link rel="stylesheet" type="text/css" href="favourites-all.css">
-<link rel="stylesheet" type="text/css" href="menu-lottery.css">
-<link rel="stylesheet" type="text/css" href="favourite-set-1.css">
-<link rel="stylesheet" type="text/css" href="weather.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="js/jquery-3.3.1.js"></script> 
+        <script src="js/jquery.mobile-1.5.0.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
         <title>Szafa Gra</title>
     </head>
     <body>
-	
-	<!--start page -->
-	<div data-role="page" id="startPage">
         
-    </div>
-	<!--logowanie -->
-	<div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">		
-        <div class="text-center social-btn">
-            <a href="#" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-            <a href="#" class="btn btn-info btn-lg btn-block"><i class="fa fa-twitter"></i> Sign in with <b>Twitter</b></a>
-			<a href="#" class="btn btn-danger btn-lg btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
+        <div data-role="page" class ="container-login" id="login">
+        
+            <div class="login-content-container">
+                <input id="email" type="text" placeholder="example@email.com" required>
+                <input id="password" type="password" placeholder="********">
+                <a class="account" href="#registration">Create account</a>
+                <a class="frg-passwd" href="#">Forgot password?</a><br>
+                <button class="login">LOGIN</button>
+                <button class="media fb"><i class="fab fa-facebook-f"  aria-hidden="true"></i>    Login with Facebook</button>
+                <button class="media g"><i class="fab fa-google-plus-g" aria-hidden="true"></i>    Sign in with Google+</button>
+              </div>
+	
+	    </div>
+       
+       <div data-role="page" id="registration">
+          <label>CREATE ACCOUNT</label>
+           <div class="form">
+               
+                <div class="input-wrapper">
+                    <input id="emailR" type="text" placeholder="E-mail" required>
+                    <label for="emailR" class="fas fa-envelope input-icon" aria-hidden="true"></label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="passwordR" type="password" placeholder="Password" pattern=".{3,10}" title="Password should be between 3 and 10 characters.">
+                    <label for="passwordR" class="fas fa-lock input-icon" aria-hidden="true"></label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="passwordConfirm" type="password" placeholder="Confirm password">
+                    <label for="passwordConfirm" class="fas fa-lock input-icon" aria-hidden="true"></label>
+                </div>
+              
+               <input type="submit" id="signup" value="SIGN UP"><a href="#main">YOLO</a>
+           </div>
+           
+	    </div>
+       
+       <div data-role="page" id="main">
+            <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+					</div>
+				<div class="menu-wardrobe">
+				<p class="img1"><a href="#wardrobe-cats"> <img src="imgs/wardrobe.svg" class="wardrobe-1" alt="Wardrobe 1"></a> Wardrobe 1</p>
+				<p class="img2"><a href="#wardrobe-cats"> <img src="imgs/wardrobe.svg" class="wardrobe-2" alt="Wardrobe 2"></a> Wardrobe 2</p>
+				<p class="img3"><a href="#wardrobe-cats"> <img src="imgs/wardrobe.svg" class="wardrobe-3" alt="Wardrobe 3"></a> Wardrobe 3</p>
+				<p class="img4"><a href="#wardrobe-cats"> <img src="imgs/wardrobe.svg" class="wardrobe-4" alt="Wardrobe 4"></a> Wardrobe 4</p>
+				</div>
+            </div>
         </div>
-		<div class="or-seperator"><b>or</b></div>
-        <div class="form-group">
-        	<input type="text" class="form-control input-lg" name="username" placeholder="example@email.com" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control input-lg" name="password" placeholder="*************" required="required">
-        </div>        
-        <div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block login-btn">Sign in</button>
-        </div>
-    </form>
-    <div class="text-center"><span class="text-muted">Don't have an account?</span> <a href="#">Sign up here</a></div>
-</div>
-	<div data-role="page" id="registrationPage">
-	<div class="container">
-	<h1> CREATE ACCOUNT</h1>
-	<form>
-	<div class="form-group">
- 
-      <div class="input-group">
-          <span class="input-group-addon left-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-          <input type="text" class="form-control input-lg" name="username" placeholder="E-mail" required="required">
-      </div>
-	  <div class="input-group">
-          <span class="input-group-addon left-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
-      </div>
-	  <div class="input-group">
-		  <span class="input-group-addon left-addon"><span class="glyphicon glyphicon-lock"></span></span>
-		  <input type="password" class="form-control input-lg" name="password" placeholder="Confirm password" required="required"> 
-	  </div>
-		  <input type="submit" name="submit"  value="SIGN UP"/>
-	  </div>
-	</div>
-	</form>
-	</div>
-	<div page-role="page" id="mainemptyPage">
-	<body id="home">
- 
-    <div class="wrapper">
-        <header>
-         <button type="button" class="btn btn-outline-primary"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
-        </header>
-    </div><!--end wrapper-->
-	<nav id="primary_nav">
-         
-    <ul>
-		<button type="button"><a href=""><span class="glyphicon glyphicon-home"></span>Home</a></button>
-		<li><a href=""><span class="glyphicon glyphicon-heart"></span>Favourites</a></li>
-		<li><a href=""><span class="glyphicon glyphicon-cloud"></span>Weather</a></li>
-		<li><a href=""><span class="glyphicon glyphicon-question-sign"></span>Draw</a></li>
-		<li><a href="#registrationPage"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
-     </ul>
- 
-</nav><!--end primary_nav-->
-	</div>
-	<div page-role="page" id="mainsthPage">
+
+
+       
+       <div data-role="page" id="wardrobe-cats">
+    	    <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+  
+				<p>Wardrobe 1</p>   
+				<div class="category">  
+				<p class="cat1"><a href="#clothes"> <img src="imgs/shirt.svg" class="tops" alt="Tops & Sweaters"></a> Tops & Sweaters</p>
+				<p class="cat2"><a href="#clothes"> <img src="imgs/dress.svg" class="dresses" alt="Dresses & Skirts"></a> Dresses & Skirts</p>
+				<p class="cat3"><a href="#clothes"> <img src="imgs/jeans.svg" class="trousers" alt="Trousers & Shorts"></a> Trousers & Shorts</p>
+				<p class="cat4"><a href="#clothes"> <img src="imgs/cloak.svg" class="outerwear" alt="Outerwear"></a> Outerwear</p> 
+				<p class="cat5"><a href="#clothes"> <img src="imgs/shoe.svg" class="footwear" alt="Footwear"></a> Footwear</p>
+				<p class="cat6"><a href="#clothes"> <img src="imgs/hat.svg" class="headgear" alt="Headgear"></a> Headgear</p>				
+				</div>
+	    </div>
+       
+       <div data-role="page" id="clothes">
+	        <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+  
+            </div>
+            
+            
+	    </div>
+       
+       <div data-role="page" id="liamneeson"> 
+	        <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+  
+            </div>
+    
+    
+	    </div>
+       
+       <div data-role="page" id="lottery">
+           <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
 	
-	</div>
-	<div page-role="page" id="wardrobePage">
+	    </div>
+       
+       <div data-role="page" id="favs-all">
+           <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+  
+            </div>
+            
+            
 	
-	</div>
-	<div page-role="page" id="clothesPage">
+	    </div>
+       
+       <div data-role="page" id="fav-set">
+           <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            
 	
-	</div>
-	<div page-role="page" id="popupPage">
+	    </div>
+       
+       <div data-role="page" id="weather">
+           <div class="navbar">
+                <div id="mobile-nav"><i class="fa fa-bars pull-right menu-icon"></i></div>
+                <div class="nav">
+                    <ul class="menu fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-home fa-fw" aria-hidden="true"></i></span><a href="#main">Home</a></li>
+                        <li><span class="fa-li"><i class="fas fa-question" aria-hidden="true"></i></span><a href="#lottery">Draw</a></li>
+                        <li><span class="fa-li"><i class="fas fa-sun" aria-hidden="true"></i></span><a href="#weather">Weather</a></li>
+                        <li><span class="fa-li"><i class="fas fa-heart" aria-hidden="true"></i></span><a href="#favs-all">Favourites</a></li>
+                        <li><span class="fa-li"><i class="fas fa-power-off" aria-hidden="true"></i></span><a href="#login">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
 	
-	</div>
-	<div page-role="page" id="removePage">
-	
-	</div>
-	<div page-role="page" id="takePhotoPage">
-	
-	</div>
-	<div page-role="page" id="takenPage">
-	
-	</div>
-	<div page-role="page" id="favouritesPage">
-	
-	</div>
-	<div page-role="page" id="lotteryPage">
-	
-	</div>
-	<div page-role="page" id="menuLotteryEnchancePage">
-	
-	</div>
-	<div page-role="page" id="favouriteSet1Page">
-	
-	</div>
-	<div page-role="page" id="weatherPage">
-	
-	</div>
+    
+	    </div>
+        
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

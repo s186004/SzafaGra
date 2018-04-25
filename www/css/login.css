@@ -6,7 +6,7 @@ height: 740px;
 
 background: #E2E2E2;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+}
 
 /* 17691-NR9P4B */
 
@@ -4070,7 +4070,7 @@ line-height: normal;
 font-size: 18px;
 
 color: #FFFFFF;
-}
+
 
 /* Rectangle */
 
@@ -4129,7 +4129,7 @@ color: #FFFFFF;
 
 
 /* Create account Forgot password? */
-.text-center {
+
 position: absolute;
 width: 238px;
 height: 20px;
@@ -4144,7 +4144,7 @@ font-size: 13px;
 
 color: #008B9E;
 text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-}
+
 
 /* ************* */
 
